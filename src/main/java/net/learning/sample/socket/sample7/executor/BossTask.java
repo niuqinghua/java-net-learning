@@ -39,7 +39,6 @@ public class BossTask implements Runnable {
                     }
                     if (sk.isReadable()) {
                         executorService.submit(new SocketTask((SocketChannel) sk.channel()));
-                        //sk.interestOps(SelectionKey.OP_READ);
                     }
                 }
             }
